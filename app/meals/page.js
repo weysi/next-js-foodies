@@ -2,6 +2,12 @@ import Link from 'next/link';
 import classes from './page.module.css';
 import MealsGrid from '@/components/meals/meals-grid';
 import { getMeals } from '@/lib/meals';
+
+export const metadata = {
+	title: 'All Meals',
+	description: 'Browse the delicious meals shared by our vibrant community',
+};
+
 export default async function MealsPage() {
 	const meals = await getMeals();
 
